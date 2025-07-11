@@ -1,0 +1,54 @@
+:root {
+  --selmon: #EF9D71;
+  --black: black;
+  --cyan: #aedee0;
+  --white: white;
+  --dselmon: rgb(83, 37, 33);
+  --dcyan: #1f2f32;
+}
+body {
+  transition: background-color ease-out 0.5s;
+}
+@font-face {
+  font-family: Neue;
+  src: url(./659dbdfd5a080be8d348316e_PP\ Neue\ Machina\ Inktrap\ Medium.ttf);
+}
+* {
+  font-family: Neue;
+}
+*::selection {
+  color: #ef9d71;
+}
+
+
+.videodiv {
+  clip-path: circle(var(--clip) at 50% 50%);
+}
+
+body[theme="black"] {
+  background-color: var(--black);
+}
+body[theme="black"] .section {
+  color: var(--white);
+}
+
+body[theme="cyan"] {
+  background-color: var(--cyan);
+}
+body[theme="cyan"] .section {
+  color: var(--dcyan);
+}
+
+body[theme="selmon"] {
+  background-color: var(--selmon);
+}
+body[theme="selmon"] .section {
+  color: var(--dselmon);
+}
+
+body[theme="white"] {
+  background-color: var(--white);
+}
+body[theme="white"] .section {
+  color: var(--black);
+}
